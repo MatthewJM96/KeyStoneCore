@@ -1,0 +1,205 @@
+###################################
+#/-------------------------------\#
+#|       Key Stone Config        |#
+#\-------------------------------/#
+###################################
+
+
+#-----------#
+#   NOTES   #
+#-----------#
+
+# When configuring this file:
+
+# Do NOT use tab, use standard spaces (2 spaces are roughly equal to a tab)
+# To avoid this, I recommend using Notepad++ over the standard Notepad (Google it if you don't already have it)
+# When using Notepad++ you can change tabs to be replaced by a configurable number of spaces by going to the
+# Settings tool bar option, then to Preferences and finally to Language Menu/Tab Settings.
+
+# Do NOT change the format of the files; i.e. if an option is indented, don't remove the indentation.
+
+# If you want to add extra information for extra ease of use; all comment lines should start with a hashtag.
+    # Hopefully adding extra comments should be unneseccary as I
+    # Aim to keep this config file as well explained as I can.
+
+# When changing strings (such as messages to players), make sure any apostrophes are "escaped"; i.e. "can''t"
+# Rather than "can't" - rather than one apostrophe, use two.
+
+# For any number values never include decimals if they are not initially provided (i.e. 20 should not
+# be changed to 20.1 or 20.1234)
+
+#---------------#
+# Core Settings #
+#---------------#
+
+#--------------------------------#
+#   Global Punishment Settings   #
+#--------------------------------#
+
+# This is the default duration of all temporary bans (in hours) unless an event/command specific duration is defined in specific config sections or in commands themselves.
+tempbanduration: 24
+
+# This is the default duration of all temporary mutes (in minutes) unless an event/command specific duration is defined in specific config sections or in commands themselves.
+tempmuteduration: 5
+
+#-------------------#
+#   Chat Settings   #
+#-------------------#
+
+
+
+##    ##
+# SPAM #
+##    ##
+
+# This is the number of times a spammer must send messages over a chosen period of time before being punsihed.
+spamchatcount: 8
+
+# This is the time over which a spammer must send the chosen number of messages before being punished.
+spamchatperiod: 6
+
+# This is the order of punishment that a spammer will be punished with.
+#
+# Punishment options are: 
+#   - 'warning' - Sends a message to the spammer to make them aware of their indiscretions.
+#   - 'tempmute' - Mutes the offender for the selected period of time.
+#   - 'mute' - Mutes the offender permanently
+#   - 'kick' - Kicks the offender
+#   - 'tempban' - Bans the offender for the selected period of time.
+#   - 'ban' - Bans the offender permanently
+#
+# Note: Admins will be warned of mutes and subsequent punishments in the list of punishments (above).
+# Note: each punishment time can be chosen multiple times (though ban may be ineffective ;) )
+#
+# Default:
+#   - 'warning'
+#   - 'mute'
+#   - 'kick'
+#   - 'ban'
+spampunishmentorder:
+  - 'warning'
+  - 'tempmute'
+  - 'kick'
+  - 'ban'
+  
+# This is the number of times a player must be caught spamming before each punishment is enacted
+# NOTE: The number of spam counts provided must be equal to the number of punishments chosen (above)
+spamcounttopunish:
+  - 2
+  - 5
+  - 7
+  - 9 
+
+# If you wish to customise individual warnings, you may define your own strings in the following list
+#
+# NOTE: The number of spam counts provided must be equal to the number of punishments chosen (above)
+#
+# Note: The place on the list to place each message at must be the corresponding point to the warning which you wish to use the string, i.e.:
+#
+# uniquewarning:
+#  - '&4Don't spam. It's bad for your health!'
+#  - ''
+#  - ''
+#  - ''
+#
+# The first warning is customised to theg given string, it is in the position of the list corresponding to the position of the 'warning' punishment
+# on the default punishment order list.
+spamuniquewarning:
+  - '&4Don't spam. It's bad for your health!'
+  - ''
+  - ''
+  - ''
+
+# This is the duration of temp. bans (in hours) given for spamming
+# Note: Set to 0 to use global settings.
+spamtempbanduration: 0
+
+# This is the duration of temp mutes (in minutes) given for spamming
+# Note: Set to 0 to use global settings.
+spamtempmuteduration: 0
+
+##             ##
+# Foul Language #
+##             ##
+
+# This is the number of times a offender must send messages over a chosen period of time before being punsihed.
+foulchatcount: 8
+
+# This is the time over which a offender must send the chosen number of messages before being punished.
+foulchatperiod: 6
+
+# This is the order of punishment that a offender will be punished with.
+#
+# Punishment options are: 
+#   - 'warning' - Sends a message to the offender to make them aware of their indiscretions.
+#   - 'tempmute' - Mutes the offender for the selected period of time.
+#   - 'mute' - Mutes the offender permanently
+#   - 'kick' - Kicks the offender
+#   - 'tempban' - Bans the offender for the selected period of time.
+#   - 'ban' - Bans the offender permanently
+#
+# Note: Admins will be warned of mutes and subsequent punishments in the list of punishments (above).
+# Note: each punishment time can be chosen multiple times (though ban may be ineffective ;) )
+# 
+# Default:
+# foulpunishmentorder:
+#   - 'warning'
+#   - 'mute'
+#   - 'kick'
+#   - 'ban'
+foulpunishmentorder:
+  - 'warning'
+  - 'tempmute'
+  - 'kick'
+  - 'ban'
+  
+# This is the number of times a player must be caught swearing before each punishment is enacted
+# NOTE: The number of foul language counts provided must be equal to the number of punishments chosen (above)
+foulcounttopunish:
+  - 2
+  - 5
+  - 7
+  - 9 
+
+# If you wish to customise individual warnings, you may define your own strings in the following list
+#
+# NOTE: The number of foul language counts provided must be equal to the number of punishments chosen (above)
+#
+# Note: The place on the list to place each message at must be the corresponding point to the warning which you wish to use the string, i.e.:
+#
+# fouluniquewarning:
+#  - '&4Don't use foul language. It's bad for your health!'
+#  - ''
+#  - ''
+#  - ''
+#
+# The first warning is customised to theg given string, it is in the position of the list corresponding to the position of the 'warning' punishment
+# on the default punishment order list.
+fouluniquewarning:
+  - '&4Don't use foul language. It's bad for your health!'
+  - ''
+  - ''
+  - ''
+
+# This is the duration of temp. bans (in hours) given for swearing
+# Note: Set to 0 to use global settings.
+foultempbanduration: 0
+
+# This is the duration of temp mutes (in minutes) given for swearing
+# Note: Set to 0 to use global settings.
+foultempmuteduration: 0
+
+#-----------------------#
+#   Database Settings   #
+#-----------------------#
+
+# If this is true then the keystone suite will use MySQL for database storage - make sure the MySQL settings are correct!
+usemysql: true
+
+# These are your MySQL settings, if you are unsure about how this works then either go to a tutorial such as TheNewBoston's MySQL tutorial series on Youtube, or disable MySQL
+user: 'root'
+password: ''
+hostname: 'localhost'
+port: '3306'
+database: 'minecraft'
+
