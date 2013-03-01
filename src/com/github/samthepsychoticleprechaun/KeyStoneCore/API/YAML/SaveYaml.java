@@ -6,31 +6,123 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.plugin.Plugin;
+import com.github.samthepsychoticleprechaun.KeyStoneCore.KeyStoneCore;
 
 public class SaveYaml {
 	
+	private static Logger log = KeyStoneCore.log;
+	
 	/**
-	 * Saves to file of name equal to string
+	 * Saves all files in plugins/<plugin> folder
 	 * 
 	 * @param plugin
 	 * @param string
 	 * @return boolean
 	 */
-	public boolean saveYaml(Plugin plugin, String string, FileConfiguration fileCon) {
+	public static boolean saveYamls() {
 		
-		File file = new File(plugin.getDataFolder(), string);
-		Logger log = plugin.getLogger();
-		String fileName = string.replaceFirst(".yml", "");
+		File configFile = KeyStoneCore.configFile;
+		File stringsFile = KeyStoneCore.stringsFile;
+		File spamFile = KeyStoneCore.spamFile;
+		FileConfiguration config = KeyStoneCore.config;
+		FileConfiguration strings = KeyStoneCore.strings;
+		FileConfiguration spam = KeyStoneCore.spam;
 		
 		try {
-			fileCon.save(file);			
+			config.save(configFile);			
 		} catch (FileNotFoundException e) {
-			log.info(fileName + " was not found!");
+			log.info("Config file was not found!");
 			e.printStackTrace();
 			return false;
 		} catch (IOException e) {
-			log.info("Error while saving " + fileName + "!");
+			log.info("Error while saving config file!");
+			e.printStackTrace();
+			return false;
+		}
+		
+		try {
+			strings.save(stringsFile);			
+		} catch (FileNotFoundException e) {
+			log.info("Strings file was not found!");
+			e.printStackTrace();
+			return false;
+		} catch (IOException e) {
+			log.info("Error while saving strings file!");
+			e.printStackTrace();
+			return false;
+		}
+		
+		try {
+			spam.save(spamFile);			
+		} catch (FileNotFoundException e) {
+			log.info("Spam file was not found!");
+			e.printStackTrace();
+			return false;
+		} catch (IOException e) {
+			log.info("Error while saving spam file!");
+			e.printStackTrace();
+			return false;
+		}
+		
+		return true;
+		
+	}
+	
+	public boolean saveConfig() {
+		
+		File configFile = KeyStoneCore.configFile;
+		FileConfiguration config = KeyStoneCore.config;
+		
+		try {
+			config.save(configFile);			
+		} catch (FileNotFoundException e) {
+			log.info("Config file was not found!");
+			e.printStackTrace();
+			return false;
+		} catch (IOException e) {
+			log.info("Error while saving config file!");
+			e.printStackTrace();
+			return false;
+		}
+		
+		return true;
+		
+	}
+	
+	public boolean saveStrings() {
+		
+		File stringsFile = KeyStoneCore.stringsFile;
+		FileConfiguration strings = KeyStoneCore.strings;
+		
+		try {
+			strings.save(stringsFile);			
+		} catch (FileNotFoundException e) {
+			log.info("Strings file was not found!");
+			e.printStackTrace();
+			return false;
+		} catch (IOException e) {
+			log.info("Error while saving strings file!");
+			e.printStackTrace();
+			return false;
+		}
+		
+		return true;
+		
+	}
+	
+	public boolean saveSpam() {
+		
+		File spamFile = KeyStoneCore.spamFile;
+		FileConfiguration spam = KeyStoneCore.spam;
+		
+		try {
+			spam.save(spamFile);			
+		} catch (FileNotFoundException e) {
+			log.info("Spam file was not found!");
+			e.printStackTrace();
+			return false;
+		} catch (IOException e) {
+			log.info("Error while saving spam file!");
 			e.printStackTrace();
 			return false;
 		}

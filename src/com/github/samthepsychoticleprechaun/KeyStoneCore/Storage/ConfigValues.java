@@ -21,6 +21,7 @@ public class ConfigValues {
 	public static int spamchatperiod;
 	public static List<String> spampunsihmentorder;
 	public static List<Integer> spamcounttopunish;
+	public static int spamcountremovalrate;
 	public static List<String> spamuniquewarning;
 	public static int spamtempbanduration;
 	public static int spamtempmuteduration;
@@ -30,6 +31,7 @@ public class ConfigValues {
 	public static int foulchatperiod;
 	public static List<String> foulpunsihmentorder;
 	public static List<Integer> foulcounttopunish;
+	public static int foulcountremovalrate;
 	public static List<String> fouluniquewarning;
 	public static int foultempbanduration;
 	public static int foultempmuteduration;

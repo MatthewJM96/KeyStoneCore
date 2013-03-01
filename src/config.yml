@@ -90,6 +90,9 @@ spamcounttopunish:
   - 7
   - 9 
 
+# The spam offence count of a player can be set to decrease steadily over a period of time, this is the time (in minutes) between each removal of a count of such an offence.
+spamcountremovalrate: 15
+
 # If you wish to customise individual warnings, you may define your own strings in the following list
 #
 # NOTE: The number of spam counts provided must be equal to the number of punishments chosen (above)
@@ -102,7 +105,7 @@ spamcounttopunish:
 #  - ''
 #  - ''
 #
-# The first warning is customised to theg given string, it is in the position of the list corresponding to the position of the 'warning' punishment
+# The first warning is customised to the given string, it is in the position of the list corresponding to the position of the 'warning' punishment
 # on the default punishment order list.
 spamuniquewarning:
   - '&4Don't spam. It's bad for your health!'
@@ -173,7 +176,7 @@ foulcounttopunish:
 #  - ''
 #  - ''
 #
-# The first warning is customised to theg given string, it is in the position of the list corresponding to the position of the 'warning' punishment
+# The first warning is customised to the given string, it is in the position of the list corresponding to the position of the 'warning' punishment
 # on the default punishment order list.
 fouluniquewarning:
   - '&4Don't use foul language. It's bad for your health!'

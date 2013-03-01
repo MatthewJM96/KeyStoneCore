@@ -3,18 +3,16 @@ package com.github.samthepsychoticleprechaun.KeyStoneCore.API.YAML;
 import java.util.logging.Logger;
 
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.configuration.file.YamlConfiguration;
-
 import com.github.samthepsychoticleprechaun.KeyStoneCore.KeyStoneCore;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.Storage.ConfigValues;
+import com.github.samthepsychoticleprechaun.KeyStoneCore.Storage.SpamValues;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.Storage.StringValues;
 
 public class GetYamlValues {
 	
 	public static boolean getConfigValues() {
 		
-		KeyStoneCore plugin = KeyStoneCore.plugin;
-		FileConfiguration config = plugin.getConfig();
+		FileConfiguration config = KeyStoneCore.config;
 		Logger log = KeyStoneCore.log;
 		
 		try {
@@ -33,6 +31,7 @@ public class GetYamlValues {
 			ConfigValues.spamchatperiod = config.getInt("spamchatperiod");
 			ConfigValues.spampunsihmentorder = config.getStringList("spampunishmentorder");
 			ConfigValues.spamcounttopunish = config.getIntegerList("spamcounttopunish");
+			ConfigValues.spamcountremovalrate = config.getInt("spamcountremovalrate");
 			ConfigValues.spamuniquewarning = config.getStringList("spamuniquewarning");
 			ConfigValues.spamtempbanduration = config.getInt("spamtempbanduration");
 			ConfigValues.spamtempmuteduration = config.getInt("spamtempmuteduration");
@@ -41,6 +40,7 @@ public class GetYamlValues {
 			ConfigValues.foulchatperiod = config.getInt("foulchatperiod");
 			ConfigValues.foulpunsihmentorder = config.getStringList("foulpunishmentorder");
 			ConfigValues.foulcounttopunish = config.getIntegerList("foulcounttopunish");
+			ConfigValues.foulcountremovalrate = config.getInt("foulcountremovalrate");
 			ConfigValues.fouluniquewarning = config.getStringList("fouluniquewarning");
 			ConfigValues.foultempbanduration = config.getInt("foultempbanduration");
 			ConfigValues.foultempmuteduration = config.getInt("foultempmuteduration");
@@ -56,7 +56,7 @@ public class GetYamlValues {
 	
 	public static boolean getStringsValues() {
 
-		FileConfiguration strings = new YamlConfiguration();
+		FileConfiguration strings = KeyStoneCore.strings;
 		Logger log = KeyStoneCore.log;
 		
 		try {
@@ -64,6 +64,33 @@ public class GetYamlValues {
 			StringValues.warnofnopermission = strings.getString("warnofnopermission");
 			StringValues.adminhelpnonespecific = strings.getString("adminhelpnonespecific");
 			StringValues.basichelpnonespecific = strings.getString("basichelpnonespecific");
+			
+		} catch (Exception e) {
+			log.info("Error getting string values!");
+			e.printStackTrace();
+			return false;
+		}
+		
+		return true;
+		
+	}
+	
+	public static boolean getSpamValues() {
+		
+		FileConfiguration spam = KeyStoneCore.spam;
+		Logger log = KeyStoneCore.log;
+		
+		try {
+			
+			SpamValues.idcount = spam.getInt("idcount");
+			
+			for(int x = 1; x <= SpamValues.idcount; x++) {
+				
+				SpamValues.playerName.add(spam.getString("id" + x +".playerName"));
+				SpamValues.offenceCount.add(spam.getInt("id" + x +".offenceCount"));
+				SpamValues.latestRemovalCount.add(spam.getString("id" + x +".latestRemovalCount"));
+				
+			}
 			
 		} catch (Exception e) {
 			log.info("Error getting string values!");

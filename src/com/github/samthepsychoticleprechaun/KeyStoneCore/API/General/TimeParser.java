@@ -301,4 +301,27 @@ public class TimeParser {
 		}
 	}
 	
+	public static int timeDifferenceToCurrent(String string) {
+		
+		Calendar curDate = GregorianCalendar.getInstance();
+		Calendar givenDate = GregorianCalendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+		Date date = null;
+		try {
+			date = sdf.parse(string);
+		} catch (ParseException e) {
+			Bukkit.getLogger().info("Error while getting the year!");
+			e.printStackTrace();
+		}
+		givenDate.setTime(date);
+		
+		int curDateMillis = (int) curDate.getTimeInMillis();
+		int givenDateMillis = (int) givenDate.getTimeInMillis();
+		
+		int timeDiff = curDateMillis - givenDateMillis;
+		
+		return timeDiff;
+		
+	}
+	
 }
