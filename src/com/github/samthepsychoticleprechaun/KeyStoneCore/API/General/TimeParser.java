@@ -29,6 +29,7 @@ public class TimeParser {
 	
 	public static String getSystDate() {
 		
+		currentDate = new Date();
 		CurDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").format(currentDate);
 		return CurDate;
 		
@@ -36,6 +37,7 @@ public class TimeParser {
 	
 	public int getSystTimeSeconds() {
 		
+		currentCal = GregorianCalendar.getInstance();
 		CurSeconds = currentCal.get(Calendar.SECOND);
 		return CurSeconds;
 		
@@ -43,13 +45,15 @@ public class TimeParser {
 	
 	public int getSystTimeMinutes() {
 		
+		currentCal = GregorianCalendar.getInstance();
 		CurMinutes = currentCal.get(Calendar.MINUTE);
 		return CurMinutes;
 		
 	}
 
 	public int getSystTimeHours() {
-	
+		
+		currentCal = GregorianCalendar.getInstance();
 		CurHours = currentCal.get(Calendar.HOUR_OF_DAY);
 		return CurHours;
 	
@@ -57,6 +61,7 @@ public class TimeParser {
 
 	public int getSystTimeDay() {
 	
+		currentCal = GregorianCalendar.getInstance();
 		CurDay = currentCal.get(Calendar.DAY_OF_MONTH);
 		return CurDay;
 	
@@ -64,6 +69,7 @@ public class TimeParser {
 
 	public int getSystTimeMonth() {
 	
+		currentCal = GregorianCalendar.getInstance();
 		CurMonth = currentCal.get(Calendar.MONTH);
 		return CurMonth;
 	
@@ -71,6 +77,7 @@ public class TimeParser {
 
 	public int getSystTimeYear() {
 	
+		currentCal = GregorianCalendar.getInstance();
 		CurYear = currentCal.get(Calendar.YEAR);
 		return CurYear;
 	

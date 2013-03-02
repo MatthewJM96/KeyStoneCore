@@ -1,4 +1,4 @@
-package com.github.samthepsychoticleprechaun.KeyStoneCore.API.YAML;
+package com.github.samthepsychoticleprechaun.KeyStoneCore.YAML;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -27,81 +27,8 @@ public class LoadYaml {
 	 */
 	public static boolean loadYamls() {
 		
-		File configFile = KeyStoneCore.configFile;
-		File stringsFile = KeyStoneCore.stringsFile;
-		File spamFile = KeyStoneCore.spamFile;
-		FileConfiguration config = KeyStoneCore.config;
-		FileConfiguration strings = KeyStoneCore.strings;
-		FileConfiguration spam = KeyStoneCore.spam;
-			
-		if(!configFile.exists()) {
-			
-			configFile.getParentFile().mkdirs();
-			copy(plugin.getResource("config.yml"), configFile);
-			KeyStoneCore.configFile = configFile;
-			
-			try {
-				config.load(configFile);
-			} catch (FileNotFoundException e) {
-				log.info("Config file was not found!");
-				e.printStackTrace();
-			} catch (IOException e) {
-				log.info("Error loading config file!");
-				e.printStackTrace();
-			} catch (InvalidConfigurationException e) {
-				log.info("Error loading config file!");
-				e.printStackTrace();
-			}
-			
-			KeyStoneCore.config = config;
-			
-		}
-		
-		if(!stringsFile.exists()) {
-			
-			stringsFile.getParentFile().mkdirs();
-			copy(plugin.getResource("strings.yml"), stringsFile);
-			KeyStoneCore.stringsFile = stringsFile;
-			
-			try {
-				strings.load(stringsFile);
-			} catch (FileNotFoundException e) {
-				log.info("Strings file was not found!");
-				e.printStackTrace();
-			} catch (IOException e) {
-				log.info("Error loading strings file!");
-				e.printStackTrace();
-			} catch (InvalidConfigurationException e) {
-				log.info("Error loading strings file!");
-				e.printStackTrace();
-			}
-
-			KeyStoneCore.strings = strings;
-			
-		} 
-		
-		if(!spamFile.exists()) {
-			
-			spamFile.getParentFile().mkdirs();
-			copy(plugin.getResource("spam.yml"), spamFile);
-			KeyStoneCore.spamFile = spamFile;
-			
-			try {
-				spam.load(spamFile);
-			} catch (FileNotFoundException e) {
-				log.info("Spam file was not found!");
-				e.printStackTrace();
-			} catch (IOException e) {
-				log.info("Error loading spam file!");
-				e.printStackTrace();
-			} catch (InvalidConfigurationException e) {
-				log.info("Error loading spam file!");
-				e.printStackTrace();
-			}
-
-			KeyStoneCore.spam = spam;
-			
-		} 
+		loadConf();
+		loadStrings();
 		
 		return true;
 		
@@ -174,44 +101,11 @@ public class LoadYaml {
 	}
 	
 	/**
-	 * Overwrites settings in "spam.yml" file in plugins/<plugin> folder.
+	 * Loads settings in "config.yml" file in plugins/<plugin> folder.
 	 * 
 	 * @return boolean
 	 */
-	public boolean overwriteSpam() {
-		
-		File spamFile = KeyStoneCore.spamFile;
-		FileConfiguration spam = KeyStoneCore.spam;
-		
-		spamFile.getParentFile().mkdirs();
-		copy(plugin.getResource("spam.yml"), spamFile);
-		KeyStoneCore.spamFile = spamFile;
-		
-		try {
-			spam.load(spamFile);
-		} catch (FileNotFoundException e) {
-			log.info("Spam file was not found!");
-			e.printStackTrace();
-		} catch (IOException e) {
-			log.info("Error loading spam file!");
-			e.printStackTrace();
-		} catch (InvalidConfigurationException e) {
-			log.info("Error loading spam file!");
-			e.printStackTrace();
-		}
-
-		KeyStoneCore.spam = spam;
-		
-		return true;
-		
-	}
-	
-	/**
-	 * Overwrites settings in "config.yml" file in plugins/<plugin> folder.
-	 * 
-	 * @return boolean
-	 */
-	public boolean loadConf() {
+	public static boolean loadConf() {
 		
 		File configFile = KeyStoneCore.configFile;
 		FileConfiguration config = KeyStoneCore.config;
@@ -236,11 +130,11 @@ public class LoadYaml {
 	}
 	
 	/**
-	 * Overwrites settings in "strings.yml" file in plugins/<plugin> folder.
+	 * Loads settings in "strings.yml" file in plugins/<plugin> folder.
 	 * 
 	 * @return boolean
 	 */
-	public boolean loadStrings() {
+	public static boolean loadStrings() {
 			
 		File stringsFile = KeyStoneCore.stringsFile;
 		FileConfiguration strings = KeyStoneCore.strings;
@@ -259,35 +153,6 @@ public class LoadYaml {
 		}
 
 		KeyStoneCore.strings = strings;
-		
-		return true;
-		
-	}
-	
-	/**
-	 * Overwrites settings in "spam.yml" file in plugins/<plugin> folder.
-	 * 
-	 * @return boolean
-	 */
-	public boolean loadSpam() {
-		
-		File spamFile = KeyStoneCore.spamFile;
-		FileConfiguration spam = KeyStoneCore.spam;
-		
-		try {
-			spam.load(spamFile);
-		} catch (FileNotFoundException e) {
-			log.info("Spam file was not found!");
-			e.printStackTrace();
-		} catch (IOException e) {
-			log.info("Error loading spam file!");
-			e.printStackTrace();
-		} catch (InvalidConfigurationException e) {
-			log.info("Error loading spam file!");
-			e.printStackTrace();
-		}
-
-		KeyStoneCore.spam = spam;
 		
 		return true;
 		

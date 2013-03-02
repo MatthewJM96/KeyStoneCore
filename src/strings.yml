@@ -31,8 +31,8 @@
 #   Strings   #
 #-------------#
 
-//ORGANIZE THIS\\
-\\-------------//
+#//ORGANIZE THIS\\
+#\\-------------//
 
 # This string is shown when a player does not have the permission to execute a command or other function
 warnofnopermission: "&4You do not have permission to do that!"

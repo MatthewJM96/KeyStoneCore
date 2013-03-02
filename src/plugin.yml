@@ -1,6 +1,9 @@
 main: com.github.samthepsychoticleprechaun.KeyStoneCore.KeyStoneCore
-name: Key Stone Plugin
+name: Key Stone Core
 version: 0.1
 description: A broad suite of server plug-ins designed for that all-in-one package that server managers deserve!
 commands:
-    
+    KeyStone:
+      description: This command is the base of all Key Stone commands.
+      aliases: ks
+loadbefore: [Key Stone Chat, Key Stone Chat Guard, Key Stone Punish]
