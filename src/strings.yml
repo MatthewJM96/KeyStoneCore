@@ -34,14 +34,29 @@
 #//ORGANIZE THIS\\
 #\\-------------//
 
-# This string is shown when a player does not have the permission to execute a command or other function
+# This message is shown when a player does not have the permission to execute a command or other function
 warnofnopermission: "&4You do not have permission to do that!"
 
-# This string is shown as the main help menu for the plugin for admin users (and console)
+# This message is shown as the main help menu for the plugin for admin users (and console)
 adminhelpnonespecific: "&9&lThese are the uses of the commands ''/KeyStone'' and ''/ks'':\n&r&b''/ks help'' - Provides this help menu to users.\n''/ks reload'' - Reloads all configuration files."
 
-# This string is shown as the main help menu for the plugin for common users
+# This message is shown as the main help menu for the plugin for common users
 basichelpnonespecific: "&9&lThese are the uses of the commands ''/KeyStone'' and ''/ks'':\n&r&b''/ks help'' - Provides this help menu to users."
 
-# This is the string that, by default, a player recieves as warning for spamming.
+# This is the message that, by default, a player recieves as warning for spamming.
 defaultspamwarning: "&4You are spamming. Please cease and desist!"
+
+# This is the message that, by default, a player recieves as warning for using foul language.
+defaultfoullanguagewarning: "&4You are using foul language. Please cease and desist!"
+
+# This is the message displayed if a command does not have enough arguments
+# Extra details are automatically added to the end of the message
+missingargcmd: "&4You missed an argument: "
+
+# This is the message displayed if a command has too many arguments
+# Extra details are automatically added to the end of the message
+extraargcmd: "&4You included too many arguments: "
+
+# This is the message displayed when a channel is successfully created
+# Extra details are automatically added to the end of the message
+createdchannel: "&2You have successfully created channel "

@@ -63,6 +63,11 @@ public class GetYamlValues {
 			StringValues.warnofnopermission = strings.getString("warnofnopermission");
 			StringValues.adminhelpnonespecific = strings.getString("adminhelpnonespecific");
 			StringValues.basichelpnonespecific = strings.getString("basichelpnonespecific");
+			StringValues.defaultspamwarning = strings.getString("defaultspamwarning");
+			StringValues.defaultfoullanguagewarning = strings.getString("defaultfoullanguagewarning");
+			StringValues.missingargcmd = strings.getString("missingargcmd");
+			StringValues.createdchannel = strings.getString("createdchannel");
+			StringValues.extraargcmd = strings.getString("extraargcmd");
 			
 		} catch (Exception e) {
 			log.info("Error getting string values!");

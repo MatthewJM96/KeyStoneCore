@@ -9,7 +9,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.github.samthepsychoticleprechaun.KeyStoneCore.API.MySQL.Connect;
-import com.github.samthepsychoticleprechaun.KeyStoneCore.API.Permissions.PermissionLoader;
+import com.github.samthepsychoticleprechaun.KeyStoneCore.Permissions.PermissionLoader;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.Storage.ConfigValues;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.YAML.GetYamlValues;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.YAML.LoadYaml;
@@ -29,6 +29,8 @@ public class KeyStoneCore extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		
+
+		
 		//Sets the plugin value for other classes
 		plugin = this;
 		
@@ -47,7 +49,7 @@ public class KeyStoneCore extends JavaPlugin {
 		GetYamlValues.getStringsValues();
 		
 		//Adds permissions when the server starts up
-		PermissionLoader.loadPerms(plugin);
+		PermissionLoader.loadPerms();
 		
 		//Connect to MySQL if it is enabled
 		if (ConfigValues.usemysql) {
@@ -63,7 +65,7 @@ public class KeyStoneCore extends JavaPlugin {
 		SaveYaml.saveYamls();
 		
 		//Removes permission when the plugin is disabled
-		PermissionLoader.unloadPerms(plugin);
+		PermissionLoader.unloadPerms();
 		
 		//Disconnects from MySQL if it is enabled
 		if (ConfigValues.usemysql) {

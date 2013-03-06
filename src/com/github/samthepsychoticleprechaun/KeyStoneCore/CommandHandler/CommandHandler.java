@@ -5,8 +5,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import com.github.samthepsychoticleprechaun.KeyStoneCore.API.Permissions.PermissionList;
+import com.github.samthepsychoticleprechaun.KeyStoneChat.API.Chat.SendMessage;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.CommandHandler.Commands.Help;
+import com.github.samthepsychoticleprechaun.KeyStoneCore.Permissions.PermissionList;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.Storage.StringValues;
 
 public class CommandHandler implements CommandExecutor{
@@ -17,7 +18,6 @@ public class CommandHandler implements CommandExecutor{
 		Player p = (Player) sender;
 		String message = StringValues.warnofnopermission;
 		
-		new PermissionList();
 		if (p.hasPermission(PermissionList.basiccmdusage)) {
 			
 			if (args[0].equalsIgnoreCase("help")) {
@@ -44,15 +44,31 @@ public class CommandHandler implements CommandExecutor{
 					
 				}
 				
+				if(args.length == 0) {
+					
+					return true;
+					
+				}
+					
+				return false;
+				
 			}
 			
 		} else {
 			
-			p.sendMessage(message);
+			SendMessage.sendMessage(message, p);
+			
+			return false;
 			
 		}
 		
-		return true;
+		if(args.length == 0) {
+			
+			return true;
+			
+		}
+		
+		return false;
 		
 	}
 
