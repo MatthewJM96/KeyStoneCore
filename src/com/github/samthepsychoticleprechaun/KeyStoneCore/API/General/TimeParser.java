@@ -23,10 +23,16 @@ public class TimeParser {
 	private int AnyDay;
 	private int AnyMonth;
 	private int AnyYear;
-	
+
+	Calendar anyCalendar = GregorianCalendar.getInstance();
 	Calendar currentCal = GregorianCalendar.getInstance();
 	static Date currentDate = new Date();
 	
+	/**
+	 * Returns the current system time
+	 * 
+	 * @return
+	 */
 	public static String getSystDate() {
 		
 		currentDate = new Date();
@@ -35,6 +41,11 @@ public class TimeParser {
 		
 	}
 	
+	/**
+	 * Returns the current system time (seconds only)
+	 * 
+	 * @return
+	 */
 	public int getSystTimeSeconds() {
 		
 		currentCal = GregorianCalendar.getInstance();
@@ -43,6 +54,11 @@ public class TimeParser {
 		
 	}
 	
+	/**
+	 * Returns the current system time (minutes only)
+	 * 
+	 * @return
+	 */
 	public int getSystTimeMinutes() {
 		
 		currentCal = GregorianCalendar.getInstance();
@@ -51,6 +67,11 @@ public class TimeParser {
 		
 	}
 
+	/**
+	 * Returns the current system time (hours only)
+	 * 
+	 * @return
+	 */
 	public int getSystTimeHours() {
 		
 		currentCal = GregorianCalendar.getInstance();
@@ -58,7 +79,12 @@ public class TimeParser {
 		return CurHours;
 	
 	}
-
+	
+	/**
+	 * Returns the current system time (days only)
+	 * 
+	 * @return
+	 */
 	public int getSystTimeDay() {
 	
 		currentCal = GregorianCalendar.getInstance();
@@ -66,7 +92,12 @@ public class TimeParser {
 		return CurDay;
 	
 	}
-
+	
+	/**
+	 * Returns the current system time (months only)
+	 * 
+	 * @return
+	 */
 	public int getSystTimeMonth() {
 	
 		currentCal = GregorianCalendar.getInstance();
@@ -74,7 +105,12 @@ public class TimeParser {
 		return CurMonth;
 	
 	}
-
+	
+	/**
+	 * Returns the current system time (years only)
+	 * 
+	 * @return
+	 */
 	public int getSystTimeYear() {
 	
 		currentCal = GregorianCalendar.getInstance();
@@ -83,11 +119,13 @@ public class TimeParser {
 	
 	}
 	
-	
-	
-	Calendar anyCalendar = GregorianCalendar.getInstance();
-	
-	public void ThisTimeSeconds(String string) {
+	/**
+	 * Returns the given date (seconds only)
+	 * 	
+	 * @param string
+	 * @return
+	 */
+	public int getThisTimeSeconds(String string) {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 		Date date = null;
@@ -104,9 +142,17 @@ public class TimeParser {
 			AnySeconds = -1;
 		}
 		
+		return AnySeconds;
+		
 	}
 
-	public void ThisTimeMinutes(String string) {
+	/**
+	 * Returns the given date (minutes only)
+	 * 
+	 * @param string
+	 * @return 
+	 */
+	public int getThisTimeMinutes(String string) {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 		Date date = null;
@@ -123,9 +169,17 @@ public class TimeParser {
 			AnyMinutes = -1;
 		}
 		
+		return AnyMinutes;
+		
 	}
 
-	public void ThisTimeHours(String string) {
+	/**
+	 * Returns the given date (hours only)
+	 * 
+	 * @param string
+	 * @return
+	 */
+	public int getThisTimeHours(String string) {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 		Date date = null;
@@ -142,9 +196,17 @@ public class TimeParser {
 			AnyHours = -1;
 		}
 		
+		return AnyHours;
+		
 	}
 
-	public void ThisTimeDay(String string) {
+	/**
+	 * Returns the given date (days only)
+	 * 
+	 * @param string
+	 * @return 
+	 */
+	public int getThisTimeDay(String string) {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 		Date date = null;
@@ -161,9 +223,17 @@ public class TimeParser {
 			AnyDay = -1;
 		}
 		
+		return AnyDay;
+		
 	}
 
-	public void ThisTimeMonth(String string) {
+	/**
+	 * Returns the given date (months only)
+	 * 
+	 * @param string
+	 * @return 
+	 */
+	public int getThisTimeMonth(String string) {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 		Date date = null;
@@ -180,9 +250,17 @@ public class TimeParser {
 			AnyMonth = -1;
 		}
 		
+		return AnyMonth;
+		
 	}
 
-	public void ThisTimeYear(String string) {
+	/**
+	 * Returns the given date (years only)
+	 * 
+	 * @param string
+	 * @return 
+	 */
+	public int getThisTimeYear(String string) {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 		Date date = null;
@@ -199,80 +277,48 @@ public class TimeParser {
 			AnyYear = -1;
 		}
 		
-	}
-	
-	public int getThisTimeSeconds(String string) {
-		
-		ThisTimeSeconds(string);
-		return AnySeconds;
-		
-	}
-
-	public int getThisTimeMinutes(String string) {
-		
-		ThisTimeMinutes(string);
-		return AnyMinutes;
-		
-	}
-
-	public int getThisTimeHours(String string) {
-		
-		ThisTimeHours(string);
-		return AnyHours;
-		
-	}
-
-	public int getThisTimeDay(String string) {
-		
-		ThisTimeDay(string);
-		return AnyDay;
-		
-	}
-
-	public int getThisTimeMonth(String string) {
-		
-		ThisTimeMonth(string);
-		return AnyMonth;
-		
-	}
-
-	public int getThisTimeYear(String string) {
-		
-		ThisTimeYear(string);
 		return AnyYear;
 		
 	}
 	
-	public static String updateTime(int Int, String string) {
+	/**
+	 * Returns a time equal to the current system time increased by a value equal
+	 * to the time period Int for the time scale string
+	 * 
+	 * @param Int
+	 * @param timeScale
+	 * @return
+	 */
+	public static String updateTime(int timePeriod, String timeScale) {
 		
 		String newDate;
 				
 		Calendar calendarDate = GregorianCalendar.getInstance();
 		calendarDate.setLenient(true);
 		
-		if (string.equalsIgnoreCase("seconds")) {
+		if (timeScale.equalsIgnoreCase("seconds")) {
 			
-			calendarDate.add(Calendar.SECOND, Int);
+			calendarDate.add(Calendar.SECOND, timePeriod);
 			
-		} else if (string.equalsIgnoreCase("minutes")) {
+		} else if (timeScale.equalsIgnoreCase("minutes")) {
 			
-			calendarDate.add(Calendar.MINUTE, Int);
+			calendarDate.add(Calendar.MINUTE, timePeriod);
 			
-		} else if (string.equalsIgnoreCase("hours")) {
+		} else if (timeScale.equalsIgnoreCase("hours")) {
 			
-			calendarDate.add(Calendar.HOUR_OF_DAY, Int);
+			calendarDate.add(Calendar.HOUR_OF_DAY, timePeriod);
 			
-		} else if (string.equalsIgnoreCase("days")) {
+		} else if (timeScale.equalsIgnoreCase("days")) {
 			
-			calendarDate.add(Calendar.DAY_OF_MONTH, Int);
+			calendarDate.add(Calendar.DAY_OF_MONTH, timePeriod);
 			
-		} else if (string.equalsIgnoreCase("months")) {
+		} else if (timeScale.equalsIgnoreCase("months")) {
 			
-			calendarDate.add(Calendar.MONTH, Int);
+			calendarDate.add(Calendar.MONTH, timePeriod);
 			
-		} else if (string.equalsIgnoreCase("years")) {
+		} else if (timeScale.equalsIgnoreCase("years")) {
 			
-			calendarDate.add(Calendar.YEAR, Int);
+			calendarDate.add(Calendar.YEAR, timePeriod);
 			
 		} 
 		
@@ -283,14 +329,24 @@ public class TimeParser {
 		
 	}
 	
-	public static boolean compareTimeToCurrent(String string) {
+	/**
+	 * Compares the given system time to the current system time.
+	 * 
+	 * Returns: Boolean true is returned if the given system time is greater than the
+	 * current system time and false if the given system time is equal to or less than
+	 * the current system time.
+	 * 
+	 * @param string
+	 * @return
+	 */
+	public static boolean compareTimeToCurrent(String time) {
 		
 		Calendar calendarDate = GregorianCalendar.getInstance();
 		Calendar givenDate = GregorianCalendar.getInstance();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 		Date date = null;
 		try {
-			date = sdf.parse(string);
+			date = sdf.parse(time);
 		} catch (ParseException e) {
 			Bukkit.getLogger().info("Error while getting the year!");
 			e.printStackTrace();
@@ -308,6 +364,17 @@ public class TimeParser {
 		}
 	}
 	
+	/**
+	 * Compares the given system time to the current system time.
+	 * 
+	 * Returns: The integer difference in milliseconds from the given date to the
+	 * current date. The integer will be greater than one if the current system time is
+	 * greater and less than one if the given system time is greater. 0 is returned if
+	 * the two system times are the same.
+	 * 
+	 * @param string
+	 * @return
+	 */
 	public static int timeDifferenceToCurrent(String string) {
 		
 		Calendar curDate = GregorianCalendar.getInstance();

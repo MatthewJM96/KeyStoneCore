@@ -68,6 +68,11 @@ public class GetYamlValues {
 			StringValues.missingargcmd = strings.getString("missingargcmd");
 			StringValues.createdchannel = strings.getString("createdchannel");
 			StringValues.extraargcmd = strings.getString("extraargcmd");
+			StringValues.failedchannelcreate = strings.getString("failedchannelcreate");
+			StringValues.createdpassword = strings.getString("createdpassword");
+			StringValues.updatedpassword = strings.getString("updatedpassword");
+			StringValues.removedpassword = strings.getString("removedpassword");
+			StringValues.confirmpassword = strings.getString("confirmpassword");
 			
 		} catch (Exception e) {
 			log.info("Error getting string values!");

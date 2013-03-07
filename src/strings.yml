@@ -50,13 +50,31 @@ defaultspamwarning: "&4You are spamming. Please cease and desist!"
 defaultfoullanguagewarning: "&4You are using foul language. Please cease and desist!"
 
 # This is the message displayed if a command does not have enough arguments
-# Extra details are automatically added to the end of the message
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
 missingargcmd: "&4You missed an argument: "
 
 # This is the message displayed if a command has too many arguments
-# Extra details are automatically added to the end of the message
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
 extraargcmd: "&4You included too many arguments: "
 
 # This is the message displayed when a channel is successfully created
-# Extra details are automatically added to the end of the message
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
 createdchannel: "&2You have successfully created channel "
+
+# This is the message displayed when a channel has not been created due to conflicting names
+failedchannelcreate: "&4There is already a channel by that name, you will have to choose another name!"
+
+# This is the message displayed when a channel password is successfully created
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+createdpassword: "&2You have successfully created a password for channel "
+
+# This is the message displayed when a player attempts to change an already existent password for a channel
+confirmpassword: "&9Type ''/ks yes'' to confirm the change of password for your channel, or ''/ks no'' if you do not wish to change the password!"
+
+# This is the message displayed when a channel password is successfully updated
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+updatedpassword: "&2You have successfully updated the password for channel "
+
+# This is the message displayed when a channel password is successfully removed
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+removedpassword: "&2You have successfully removed the password of channel "
