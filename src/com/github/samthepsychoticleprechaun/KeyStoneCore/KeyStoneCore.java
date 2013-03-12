@@ -37,12 +37,14 @@ public class KeyStoneCore extends JavaPlugin {
 		//Gets the plugin's logger
 		log = plugin.getLogger();
 		
+		LoadYaml load = new LoadYaml();
+		
 		//Creates necessary file if not already in data folder and loads the same files
 		configFile = new File(getDataFolder(), "config.yml");
 		stringsFile = new File(getDataFolder(), "strings.yml");
 		config = new YamlConfiguration();
 		strings = new YamlConfiguration();
-		LoadYaml.loadYamls();
+		load.loadYamls();
 		
 		//Gets values for yaml files
 		GetYamlValues.getConfigValues();

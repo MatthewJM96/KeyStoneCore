@@ -27,6 +27,8 @@
 
 # When starting a new line use '\n', for example: "These are the uses of ''/ks'':\n ''/ks help''\n ''/ks heal''" 
 
+# If you wish to include colour, then use &<format num/letter> if you have the Key Stone Chat module installed and enabled, else use §<format num/letter> (Alt + 2 + 1).
+
 #-------------#
 #   Strings   #
 #-------------#
@@ -35,46 +37,50 @@
 #\\-------------//
 
 # This message is shown when a player does not have the permission to execute a command or other function
-warnofnopermission: "&4You do not have permission to do that!"
-
-# This message is shown as the main help menu for the plugin for admin users (and console)
-adminhelpnonespecific: "&9&lThese are the uses of the commands ''/KeyStone'' and ''/ks'':\n&r&b''/ks help'' - Provides this help menu to users.\n''/ks reload'' - Reloads all configuration files."
-
-# This message is shown as the main help menu for the plugin for common users
-basichelpnonespecific: "&9&lThese are the uses of the commands ''/KeyStone'' and ''/ks'':\n&r&b''/ks help'' - Provides this help menu to users."
+warnofnopermission: "§4You do not have permission to do that!"
 
 # This is the message that, by default, a player recieves as warning for spamming.
-defaultspamwarning: "&4You are spamming. Please cease and desist!"
+defaultspamwarning: "§4You are spamming. Please cease and desist!"
 
 # This is the message that, by default, a player recieves as warning for using foul language.
-defaultfoullanguagewarning: "&4You are using foul language. Please cease and desist!"
+defaultfoullanguagewarning: "§4You are using foul language. Please cease and desist!"
 
 # This is the message displayed if a command does not have enough arguments
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
-missingargcmd: "&4You missed an argument: "
+missingargcmd: "§4You missed an argument: "
 
 # This is the message displayed if a command has too many arguments
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
-extraargcmd: "&4You included too many arguments: "
+extraargcmd: "§4You included too many arguments: "
 
 # This is the message displayed when a channel is successfully created
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
-createdchannel: "&2You have successfully created channel "
+createdchannel: "§2You have successfully created channel "
 
 # This is the message displayed when a channel has not been created due to conflicting names
-failedchannelcreate: "&4There is already a channel by that name, you will have to choose another name!"
+failedchannelcreate: "§4There is already a channel by that name, you will have to choose another name!"
 
 # This is the message displayed when a channel password is successfully created
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
-createdpassword: "&2You have successfully created a password for channel "
+createdpassword: "§2You have successfully created a password for channel "
 
 # This is the message displayed when a player attempts to change an already existent password for a channel
-confirmpassword: "&9Type ''/ks yes'' to confirm the change of password for your channel, or ''/ks no'' if you do not wish to change the password!"
+confirmpassword: "§9Type ''/ks yes'' to confirm the change of password for your channel, or ''/ks no'' if you do not wish to change the password!"
+
+# This is the message displayed when a player returns '/ks no' to the confirmation message for changing 
+# their channel's password
+deniedpassword: "§2You have not made any changes to your previous password!"
 
 # This is the message displayed when a channel password is successfully updated
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
-updatedpassword: "&2You have successfully updated the password for channel "
+updatedpassword: "§2You have successfully updated the password for channel "
 
 # This is the message displayed when a channel password is successfully removed
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
-removedpassword: "&2You have successfully removed the password of channel "
+removedpassword: "§2You have successfully removed the password of channel "
+
+#The following messages are displayed when the respecitve modules are successfully reloaded:
+reloadallsuccess: "§2Successfully reloaded the whole Key Stone Suite!"
+reloadcoresuccess: "§2Successfully reloaded the Key Stone Core module!"
+reloadchatsuccess: "§2Successfully reloaded the Key Stone Chat module!"
+reloadchatguardsuccess: "§2Successully reloaded the Key Stone Chat Guard module!"

@@ -58,21 +58,26 @@ public class GetYamlValues {
 		FileConfiguration strings = KeyStoneCore.strings;
 		Logger log = KeyStoneCore.log;
 		
+		StringValues load = new StringValues();
+		
 		try {
 			
-			StringValues.warnofnopermission = strings.getString("warnofnopermission");
-			StringValues.adminhelpnonespecific = strings.getString("adminhelpnonespecific");
-			StringValues.basichelpnonespecific = strings.getString("basichelpnonespecific");
-			StringValues.defaultspamwarning = strings.getString("defaultspamwarning");
-			StringValues.defaultfoullanguagewarning = strings.getString("defaultfoullanguagewarning");
-			StringValues.missingargcmd = strings.getString("missingargcmd");
-			StringValues.createdchannel = strings.getString("createdchannel");
-			StringValues.extraargcmd = strings.getString("extraargcmd");
-			StringValues.failedchannelcreate = strings.getString("failedchannelcreate");
-			StringValues.createdpassword = strings.getString("createdpassword");
-			StringValues.updatedpassword = strings.getString("updatedpassword");
-			StringValues.removedpassword = strings.getString("removedpassword");
-			StringValues.confirmpassword = strings.getString("confirmpassword");
+			load.warnofnopermission = strings.getString("warnofnopermission");
+			load.defaultspamwarning = strings.getString("defaultspamwarning");
+			load.defaultfoullanguagewarning = strings.getString("defaultfoullanguagewarning");
+			load.missingargcmd = strings.getString("missingargcmd");
+			load.createdchannel = strings.getString("createdchannel");
+			load.extraargcmd = strings.getString("extraargcmd");
+			load.failedchannelcreate = strings.getString("failedchannelcreate");
+			load.createdpassword = strings.getString("createdpassword");
+			load.updatedpassword = strings.getString("updatedpassword");
+			load.removedpassword = strings.getString("removedpassword");
+			load.confirmpassword = strings.getString("confirmpassword");
+			load.deniedpassword = strings.getString("deniedpassword");
+			load.reloadcoresuccess = strings.getString("reloadcoresuccess");
+			load.reloadchatsuccess = strings.getString("reloadchatsuccess");
+			load.reloadchatguardsuccess = strings.getString("reloadchatguardsuccess");
+			load.reloadallsuccess = strings.getString("reloadallsuccess");
 			
 		} catch (Exception e) {
 			log.info("Error getting string values!");

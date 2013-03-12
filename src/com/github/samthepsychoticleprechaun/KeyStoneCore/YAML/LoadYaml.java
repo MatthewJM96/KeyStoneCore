@@ -18,17 +18,21 @@ public class LoadYaml {
 	private static KeyStoneCore plugin = KeyStoneCore.plugin;
 	private static Logger log = KeyStoneCore.log;
 	
+	public LoadYaml() {
+		return;
+	}
+	
 	/**
 	 *  Loads all files from <plugin>.jar file to plugins/<plugin> folder.
 	 * 
-	 * @param plugin
-	 * @param string
-	 * @return boolean
+	 * @return Boolean of true if successful, else returns false.
 	 */
-	public static boolean loadYamls() {
+	public boolean loadYamls() {
 		
-		loadConf();
-		loadStrings();
+		if (!loadConf())
+			return false;
+		if (!loadStrings())
+			return false;
 		
 		return true;
 		
@@ -53,12 +57,15 @@ public class LoadYaml {
 		} catch (FileNotFoundException e) {
 			log.info("Config file was not found!");
 			e.printStackTrace();
+			return false;
 		} catch (IOException e) {
 			log.info("Error loading config file!");
 			e.printStackTrace();
+			return false;
 		} catch (InvalidConfigurationException e) {
 			log.info("Error loading config file!");
 			e.printStackTrace();
+			return false;
 		}
 
 		KeyStoneCore.config = config;
@@ -86,12 +93,15 @@ public class LoadYaml {
 		} catch (FileNotFoundException e) {
 			log.info("Strings file was not found!");
 			e.printStackTrace();
+			return false;
 		} catch (IOException e) {
 			log.info("Error loading strings file!");
 			e.printStackTrace();
+			return false;
 		} catch (InvalidConfigurationException e) {
 			log.info("Error loading strings file!");
 			e.printStackTrace();
+			return false;
 		}
 
 		KeyStoneCore.strings = strings;
@@ -105,7 +115,7 @@ public class LoadYaml {
 	 * 
 	 * @return boolean
 	 */
-	public static boolean loadConf() {
+	public boolean loadConf() {
 		
 		File configFile = KeyStoneCore.configFile;
 		FileConfiguration config = KeyStoneCore.config;
@@ -115,12 +125,15 @@ public class LoadYaml {
 		} catch (FileNotFoundException e) {
 			log.info("Config file was not found!");
 			e.printStackTrace();
+			return false;
 		} catch (IOException e) {
 			log.info("Error loading config file!");
 			e.printStackTrace();
+			return false;
 		} catch (InvalidConfigurationException e) {
 			log.info("Error loading config file!");
 			e.printStackTrace();
+			return false;
 		}
 
 		KeyStoneCore.config = config;
@@ -134,7 +147,7 @@ public class LoadYaml {
 	 * 
 	 * @return boolean
 	 */
-	public static boolean loadStrings() {
+	public boolean loadStrings() {
 			
 		File stringsFile = KeyStoneCore.stringsFile;
 		FileConfiguration strings = KeyStoneCore.strings;
@@ -144,12 +157,15 @@ public class LoadYaml {
 		} catch (FileNotFoundException e) {
 			log.info("Strings file was not found!");
 			e.printStackTrace();
+			return false;
 		} catch (IOException e) {
 			log.info("Error loading strings file!");
 			e.printStackTrace();
+			return false;
 		} catch (InvalidConfigurationException e) {
 			log.info("Error loading strings file!");
 			e.printStackTrace();
+			return false;
 		}
 
 		KeyStoneCore.strings = strings;
@@ -165,7 +181,7 @@ public class LoadYaml {
 	 * @param in
 	 * @param file
 	 */
-	private static void copy(InputStream in, File file) {
+	private void copy(InputStream in, File file) {
 		
         try {
         	
