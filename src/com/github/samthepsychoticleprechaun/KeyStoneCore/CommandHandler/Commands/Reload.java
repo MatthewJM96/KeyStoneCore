@@ -17,7 +17,8 @@ public class Reload {
 	}
 	
 	KeyStoneCore plugin = KeyStoneCore.plugin;
-	IsEnabled is = new IsEnabled();
+	IsEnabled isEnabled = new IsEnabled();
+	SendMessage msg = null;
 	
 	StringValues load = new StringValues();
 	String allReloadSuccess = load.reloadallsuccess;
@@ -35,6 +36,10 @@ public class Reload {
 	 */
 	public boolean reload(CommandSender sender) {
 		
+		if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
+			msg = new SendMessage();
+		}
+		
 		if (!rldCore())
 			return false;
 		if (!rldChat())
@@ -42,9 +47,9 @@ public class Reload {
 		if (!rldChatGuard())
 			return false;
 		
-		if (is.getIsEnabledList().get("KeyStoneChat")) {
+		if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
 
-			SendMessage.sendMessage(allReloadSuccess, sender);			
+			msg.sendMessage(allReloadSuccess, sender);			
 			
 		} else {
 			
@@ -84,12 +89,16 @@ public class Reload {
 	 */
 	public boolean reloadCore(CommandSender sender) {
 		
+		if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
+			msg = new SendMessage();
+		}
+		
 		if (!rldCore())
 			return false;
 		
-		if (is.getIsEnabledList().get("KeyStoneChat")) {
+		if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
 			
-			SendMessage.sendMessage(coreReloadSuccess, sender);
+			msg.sendMessage(coreReloadSuccess, sender);
 			
 		} else {
 			
@@ -125,12 +134,16 @@ public class Reload {
 	 */
 	public boolean reloadChat(CommandSender sender) {
 		
+		if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
+			msg = new SendMessage();
+		}
+		
 		if (!rldChat())
 			return false;
 		
-		if (is.getIsEnabledList().get("KeyStoneChat")) {
+		if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
 			
-			SendMessage.sendMessage(chatReloadSuccess, sender);
+			msg.sendMessage(chatReloadSuccess, sender);
 			
 		} else {
 			
@@ -166,12 +179,16 @@ public class Reload {
 	 */
 	public boolean reloadChatGuard(CommandSender sender) {
 		
+		if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
+			msg = new SendMessage();
+		}
+		
 		if (!rldChatGuard())
 			return false;
 		
-		if (is.getIsEnabledList().get("KeyStoneChat")) {
+		if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
 			
-			SendMessage.sendMessage(chatGuardReloadSuccess, sender);
+			msg.sendMessage(chatGuardReloadSuccess, sender);
 			
 		} else {
 			
