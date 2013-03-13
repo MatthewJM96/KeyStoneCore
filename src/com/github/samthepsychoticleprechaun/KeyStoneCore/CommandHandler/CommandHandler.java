@@ -6,15 +6,15 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import com.github.samthepsychoticleprechaun.KeyStoneChat.API.Chat.SendMessage;
-import com.github.samthepsychoticleprechaun.KeyStoneCore.KeyStoneCore;
+import com.github.samthepsychoticleprechaun.KeyStoneCore.API.General.IsEnabled;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.CommandHandler.Commands.Reload;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.Permissions.PermissionList;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.Storage.StringValues;
 
 public class CommandHandler implements CommandExecutor{
 	
-	private static KeyStoneCore plugin = KeyStoneCore.plugin;
 	PermissionList perm = new PermissionList();
+	IsEnabled isEnabled = new IsEnabled();
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
@@ -23,6 +23,10 @@ public class CommandHandler implements CommandExecutor{
 		StringValues load = new StringValues();
 		String noperm = load.warnofnopermission;
 		String extraargs = load.extraargcmd;
+		SendMessage msg = null;
+		if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
+			msg = new SendMessage();
+		}
 		
 		if (p.hasPermission(perm.basiccmdusage)) {
 			
@@ -30,7 +34,7 @@ public class CommandHandler implements CommandExecutor{
 				
 				if (args.length == 1) {
 					
-					if (plugin.getServer().getPluginManager().isPluginEnabled("KeyStoneChat")) {
+					if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
 
 						//TODO: Something
 						
@@ -46,9 +50,9 @@ public class CommandHandler implements CommandExecutor{
 					
 				} else {
 					
-					if (plugin.getServer().getPluginManager().isPluginEnabled("KeyStoneChat")) {
+					if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
 						
-						SendMessage.sendMessage(extraargs, p);
+						msg.sendMessage(extraargs, p);
 						
 					} else {
 						
@@ -85,9 +89,9 @@ public class CommandHandler implements CommandExecutor{
 					
 				} else {
 					
-					if (plugin.getServer().getPluginManager().isPluginEnabled("KeyStoneChat")) {
+					if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
 						
-						SendMessage.sendMessage(extraargs, p);
+						msg.sendMessage(extraargs, p);
 						
 					} else {
 						
@@ -101,9 +105,9 @@ public class CommandHandler implements CommandExecutor{
 			
 		} else {
 			
-			if (plugin.getServer().getPluginManager().isPluginEnabled("KeyStoneChat")) {
+			if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
 			
-				SendMessage.sendMessage(noperm, p);
+				msg.sendMessage(noperm, p);
 			
 			} else {
 				

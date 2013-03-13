@@ -23,5 +23,6 @@ public class StringValues {
 	public String reloadchatsuccess;
 	public String reloadchatguardsuccess;
 	public String reloadallsuccess;
+	public String renamedisallowed;
 	
 }

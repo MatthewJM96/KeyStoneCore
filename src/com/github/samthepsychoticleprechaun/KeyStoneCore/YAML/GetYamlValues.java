@@ -79,6 +79,7 @@ public class GetYamlValues {
 			load.reloadchatguardsuccess = strings.getString("reloadchatguardsuccess");
 			load.reloadallsuccess = strings.getString("reloadallsuccess");
 			load.renamechannel = strings.getString("renamechannel");
+			load.renamedisallowed = strings.getString("renamedisallowed");
 			
 		} catch (Exception e) {
 			log.info("Error getting string values!");

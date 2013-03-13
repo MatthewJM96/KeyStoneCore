@@ -64,6 +64,10 @@ failedchannelcreate: "§4There is already a channel by that name, you will have t
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
 renamechannel: "§2You have successfully renamed channel "
 
+# This is the message displayed when a player may not rename a channel due to not being the owner or
+# moderator of the channel.
+renamedisallowed: "§4You are not the Owner of this channel, nor a Moderator, you can't rename the channel!"
+
 # This is the message displayed when a channel password is successfully created
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
 createdpassword: "§2You have successfully created a password for channel "
