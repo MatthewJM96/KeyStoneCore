@@ -11,6 +11,7 @@ public class StringValues {
 	public String defaultfoullanguagewarning;
 	public String missingargcmd;
 	public String createdchannel;
+	public String renamechannel;
 	public String extraargcmd;
 	public String failedchannelcreate;
 	public String createdpassword;

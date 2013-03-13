@@ -14,6 +14,7 @@ import com.github.samthepsychoticleprechaun.KeyStoneCore.Storage.StringValues;
 public class CommandHandler implements CommandExecutor{
 	
 	private static KeyStoneCore plugin = KeyStoneCore.plugin;
+	PermissionList perm = new PermissionList();
 	
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
@@ -23,7 +24,7 @@ public class CommandHandler implements CommandExecutor{
 		String noperm = load.warnofnopermission;
 		String extraargs = load.extraargcmd;
 		
-		if (p.hasPermission(PermissionList.basiccmdusage)) {
+		if (p.hasPermission(perm.basiccmdusage)) {
 			
 			if (args[0].equalsIgnoreCase("help")) {
 				

@@ -6,67 +6,69 @@ import com.github.samthepsychoticleprechaun.KeyStoneCore.KeyStoneCore;
 
 public class PermissionLoader {
 	
-	public static void loadPerms() {
+	public PermissionLoader() {
+		return;
+	}
+	
+	KeyStoneCore plugin = KeyStoneCore.plugin;
+	PluginManager pm = plugin.getServer().getPluginManager();
+	PermissionList pl = new PermissionList();
+	
+	public void loadPerms() {
 		
-		KeyStoneCore plugin = KeyStoneCore.plugin;
-		PluginManager pm = plugin.getServer().getPluginManager();
-		
-		pm.addPermission(PermissionList.basiccmdusage);
-		pm.addPermission(PermissionList.editconfig);
-		pm.addPermission(PermissionList.reload);
-		pm.addPermission(PermissionList.helpadmin);
-		pm.addPermission(PermissionList.helpbasic);
-		pm.addPermission(PermissionList.formatColour);
-		pm.addPermission(PermissionList.formatFormat);
-		pm.addPermission(PermissionList.formatMagic);
-		pm.addPermission(PermissionList.channelBasicCreate);
-		pm.addPermission(PermissionList.channelBasicPassword);
-		pm.addPermission(PermissionList.channelBasicDescription);
-		pm.addPermission(PermissionList.channelBasicOwner);
-		pm.addPermission(PermissionList.channelBasicModerator);
-		pm.addPermission(PermissionList.channelBasicInvite);
-		pm.addPermission(PermissionList.channelBasicRename);
-		pm.addPermission(PermissionList.channelBasicDelete);
-		pm.addPermission(PermissionList.channelAdminCreate);
-		pm.addPermission(PermissionList.channelAdminPassword);
-		pm.addPermission(PermissionList.channelAdminDescription);
-		pm.addPermission(PermissionList.channelAdminOwner);
-		pm.addPermission(PermissionList.channelAdminModerator);
-		pm.addPermission(PermissionList.channelAdminAdd);
-		pm.addPermission(PermissionList.channelAdminRename);
-		pm.addPermission(PermissionList.channelAdminDelete);
+		pm.addPermission(pl.basiccmdusage);
+		pm.addPermission(pl.editconfig);
+		pm.addPermission(pl.reload);
+		pm.addPermission(pl.helpadmin);
+		pm.addPermission(pl.helpbasic);
+		pm.addPermission(pl.formatColour);
+		pm.addPermission(pl.formatFormat);
+		pm.addPermission(pl.formatMagic);
+		pm.addPermission(pl.channelBasicCreate);
+		pm.addPermission(pl.channelBasicPassword);
+		pm.addPermission(pl.channelBasicDescription);
+		pm.addPermission(pl.channelBasicOwner);
+		pm.addPermission(pl.channelBasicModerator);
+		pm.addPermission(pl.channelBasicInvite);
+		pm.addPermission(pl.channelBasicRename);
+		pm.addPermission(pl.channelBasicDelete);
+		pm.addPermission(pl.channelAdminCreate);
+		pm.addPermission(pl.channelAdminPassword);
+		pm.addPermission(pl.channelAdminDescription);
+		pm.addPermission(pl.channelAdminOwner);
+		pm.addPermission(pl.channelAdminModerator);
+		pm.addPermission(pl.channelAdminAdd);
+		pm.addPermission(pl.channelAdminRename);
+		pm.addPermission(pl.channelAdminDelete);
 		
 	}
 	
-	public static void unloadPerms() {
+	public void unloadPerms() {
 		
-		KeyStoneCore plugin = KeyStoneCore.plugin;
-		PluginManager pm = plugin.getServer().getPluginManager();
-		
-		pm.removePermission(PermissionList.basiccmdusage);
-		pm.removePermission(PermissionList.editconfig);
-		pm.removePermission(PermissionList.reload);
-		pm.removePermission(PermissionList.helpadmin);
-		pm.removePermission(PermissionList.helpbasic);
-		pm.removePermission(PermissionList.formatColour);
-		pm.removePermission(PermissionList.formatFormat);
-		pm.removePermission(PermissionList.formatMagic);
-		pm.removePermission(PermissionList.channelBasicCreate);
-		pm.removePermission(PermissionList.channelBasicPassword);
-		pm.removePermission(PermissionList.channelBasicDescription);
-		pm.removePermission(PermissionList.channelBasicOwner);
-		pm.removePermission(PermissionList.channelBasicModerator);
-		pm.removePermission(PermissionList.channelBasicInvite);
-		pm.removePermission(PermissionList.channelBasicRename);
-		pm.removePermission(PermissionList.channelBasicDelete);
-		pm.removePermission(PermissionList.channelAdminCreate);
-		pm.removePermission(PermissionList.channelAdminPassword);
-		pm.removePermission(PermissionList.channelAdminDescription);
-		pm.removePermission(PermissionList.channelAdminOwner);
-		pm.removePermission(PermissionList.channelAdminModerator);
-		pm.removePermission(PermissionList.channelAdminAdd);
-		pm.removePermission(PermissionList.channelAdminRename);
-		pm.removePermission(PermissionList.channelAdminDelete);
+		pm.removePermission(pl.basiccmdusage);
+		pm.removePermission(pl.editconfig);
+		pm.removePermission(pl.reload);
+		pm.removePermission(pl.helpadmin);
+		pm.removePermission(pl.helpbasic);
+		pm.removePermission(pl.formatColour);
+		pm.removePermission(pl.formatFormat);
+		pm.removePermission(pl.formatMagic);
+		pm.removePermission(pl.channelBasicCreate);
+		pm.removePermission(pl.channelBasicPassword);
+		pm.removePermission(pl.channelBasicDescription);
+		pm.removePermission(pl.channelBasicOwner);
+		pm.removePermission(pl.channelBasicModerator);
+		pm.removePermission(pl.channelBasicInvite);
+		pm.removePermission(pl.channelBasicRename);
+		pm.removePermission(pl.channelBasicDelete);
+		pm.removePermission(pl.channelAdminCreate);
+		pm.removePermission(pl.channelAdminPassword);
+		pm.removePermission(pl.channelAdminDescription);
+		pm.removePermission(pl.channelAdminOwner);
+		pm.removePermission(pl.channelAdminModerator);
+		pm.removePermission(pl.channelAdminAdd);
+		pm.removePermission(pl.channelAdminRename);
+		pm.removePermission(pl.channelAdminDelete);
 		
 	}
 

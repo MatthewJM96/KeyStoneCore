@@ -38,6 +38,7 @@ public class KeyStoneCore extends JavaPlugin {
 		log = plugin.getLogger();
 		
 		LoadYaml load = new LoadYaml();
+		PermissionLoader perm = new PermissionLoader();
 		
 		//Creates necessary file if not already in data folder and loads the same files
 		configFile = new File(getDataFolder(), "config.yml");
@@ -51,7 +52,7 @@ public class KeyStoneCore extends JavaPlugin {
 		GetYamlValues.getStringsValues();
 		
 		//Adds permissions when the server starts up
-		PermissionLoader.loadPerms();
+		perm.loadPerms();
 		
 		//Connect to MySQL if it is enabled
 		if (ConfigValues.usemysql) {
@@ -62,12 +63,15 @@ public class KeyStoneCore extends JavaPlugin {
 	
 	@Override
 	public void onDisable() {
+
+		SaveYaml save = new SaveYaml();
+		PermissionLoader perm = new PermissionLoader();
 		
 		//Save all files from plugins/<plugin> folder
-		SaveYaml.saveYamls();
+		save.saveYamls();
 		
 		//Removes permission when the plugin is disabled
-		PermissionLoader.unloadPerms();
+		perm.unloadPerms();
 		
 		//Disconnects from MySQL if it is enabled
 		if (ConfigValues.usemysql) {

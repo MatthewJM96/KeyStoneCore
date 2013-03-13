@@ -60,6 +60,10 @@ createdchannel: "§2You have successfully created channel "
 # This is the message displayed when a channel has not been created due to conflicting names
 failedchannelcreate: "§4There is already a channel by that name, you will have to choose another name!"
 
+# This is the message displayed when a channel name is successfully changed
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+renamechannel: "§2You have successfully renamed channel "
+
 # This is the message displayed when a channel password is successfully created
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
 createdpassword: "§2You have successfully created a password for channel "

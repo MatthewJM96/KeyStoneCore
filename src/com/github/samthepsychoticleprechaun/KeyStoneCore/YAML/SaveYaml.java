@@ -12,6 +12,10 @@ public class SaveYaml {
 	
 	private static Logger log = KeyStoneCore.log;
 	
+	public SaveYaml() {
+		return;
+	}
+	
 	/**
 	 * Saves all files in plugins/<plugin> folder
 	 * 
@@ -19,7 +23,7 @@ public class SaveYaml {
 	 * @param string
 	 * @return boolean
 	 */
-	public static boolean saveYamls() {
+	public boolean saveYamls() {
 		
 		saveConfig();
 		saveStrings();
@@ -28,7 +32,7 @@ public class SaveYaml {
 		
 	}
 	
-	public static boolean saveConfig() {
+	public boolean saveConfig() {
 		
 		File configFile = KeyStoneCore.configFile;
 		FileConfiguration config = KeyStoneCore.config;
@@ -49,7 +53,7 @@ public class SaveYaml {
 		
 	}
 	
-	public static boolean saveStrings() {
+	public boolean saveStrings() {
 		
 		File stringsFile = KeyStoneCore.stringsFile;
 		FileConfiguration strings = KeyStoneCore.strings;
