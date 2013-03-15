@@ -3,6 +3,7 @@ package com.github.samthepsychoticleprechaun.KeyStoneCore.CommandHandler.Command
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import com.github.samthepsychoticleprechaun.KeyStoneChatGuard.YAML.LoadChatGuardYaml;
 import com.github.samthepsychoticleprechaun.KeyStoneChat.API.Chat.SendMessage;
 import com.github.samthepsychoticleprechaun.KeyStoneChat.YAML.LoadChatYaml;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.KeyStoneCore;

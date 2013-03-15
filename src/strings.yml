@@ -92,3 +92,11 @@ reloadallsuccess: "§2Successfully reloaded the whole Key Stone Suite!"
 reloadcoresuccess: "§2Successfully reloaded the Key Stone Core module!"
 reloadchatsuccess: "§2Successfully reloaded the Key Stone Chat module!"
 reloadchatguardsuccess: "§2Successully reloaded the Key Stone Chat Guard module!"
+
+#------------------#
+#   Help Command   #
+#------------------#
+
+helpheader: "§9=========   Help Menu   ========="
+helpcore: "§b   ======   Core Help   ======\n"
+helpcorepg1: "§a
