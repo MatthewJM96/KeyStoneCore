@@ -28,7 +28,7 @@ public class CommandHandler implements CommandExecutor{
 			msg = new SendMessage();
 		}
 		
-		if (p.hasPermission(perm.basiccmdusage)) {
+		if (p.hasPermission(perm.getBasiccmdusage())) {
 			
 			if (args[0].equalsIgnoreCase("help")) {
 				

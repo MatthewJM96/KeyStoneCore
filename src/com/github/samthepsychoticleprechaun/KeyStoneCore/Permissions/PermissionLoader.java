@@ -16,59 +16,59 @@ public class PermissionLoader {
 	
 	public void loadPerms() {
 		
-		pm.addPermission(pl.basiccmdusage);
-		pm.addPermission(pl.editconfig);
-		pm.addPermission(pl.reload);
-		pm.addPermission(pl.helpadmin);
-		pm.addPermission(pl.helpbasic);
-		pm.addPermission(pl.formatColour);
-		pm.addPermission(pl.formatFormat);
-		pm.addPermission(pl.formatMagic);
-		pm.addPermission(pl.channelBasicCreate);
-		pm.addPermission(pl.channelBasicPassword);
-		pm.addPermission(pl.channelBasicDescription);
-		pm.addPermission(pl.channelBasicOwner);
-		pm.addPermission(pl.channelBasicModerator);
-		pm.addPermission(pl.channelBasicInvite);
-		pm.addPermission(pl.channelBasicRename);
-		pm.addPermission(pl.channelBasicDelete);
-		pm.addPermission(pl.channelAdminCreate);
-		pm.addPermission(pl.channelAdminPassword);
-		pm.addPermission(pl.channelAdminDescription);
-		pm.addPermission(pl.channelAdminOwner);
-		pm.addPermission(pl.channelAdminModerator);
-		pm.addPermission(pl.channelAdminAdd);
-		pm.addPermission(pl.channelAdminRename);
-		pm.addPermission(pl.channelAdminDelete);
+		pm.addPermission(pl.getBasiccmdusage());
+		pm.addPermission(pl.getEditconfig());
+		pm.addPermission(pl.getReload());
+		pm.addPermission(pl.getHelpadmin());
+		pm.addPermission(pl.getHelpbasic());
+		pm.addPermission(pl.getFormatColour());
+		pm.addPermission(pl.getFormatFormat());
+		pm.addPermission(pl.getFormatMagic());
+		pm.addPermission(pl.getChannelBasicCreate());
+		pm.addPermission(pl.getChannelBasicPassword());
+		pm.addPermission(pl.getChannelBasicDescription());
+		pm.addPermission(pl.getChannelBasicOwner());
+		pm.addPermission(pl.getChannelBasicModerator());
+		pm.addPermission(pl.getChannelBasicInvite());
+		pm.addPermission(pl.getChannelBasicRename());
+		pm.addPermission(pl.getChannelBasicDelete());
+		pm.addPermission(pl.getChannelAdminCreate());
+		pm.addPermission(pl.getChannelAdminPassword());
+		pm.addPermission(pl.getChannelAdminDescription());
+		pm.addPermission(pl.getChannelAdminOwner());
+		pm.addPermission(pl.getChannelAdminModerator());
+		pm.addPermission(pl.getChannelAdminAdd());
+		pm.addPermission(pl.getChannelAdminRename());
+		pm.addPermission(pl.getChannelAdminDelete());
 		
 	}
 	
 	public void unloadPerms() {
 		
-		pm.removePermission(pl.basiccmdusage);
-		pm.removePermission(pl.editconfig);
-		pm.removePermission(pl.reload);
-		pm.removePermission(pl.helpadmin);
-		pm.removePermission(pl.helpbasic);
-		pm.removePermission(pl.formatColour);
-		pm.removePermission(pl.formatFormat);
-		pm.removePermission(pl.formatMagic);
-		pm.removePermission(pl.channelBasicCreate);
-		pm.removePermission(pl.channelBasicPassword);
-		pm.removePermission(pl.channelBasicDescription);
-		pm.removePermission(pl.channelBasicOwner);
-		pm.removePermission(pl.channelBasicModerator);
-		pm.removePermission(pl.channelBasicInvite);
-		pm.removePermission(pl.channelBasicRename);
-		pm.removePermission(pl.channelBasicDelete);
-		pm.removePermission(pl.channelAdminCreate);
-		pm.removePermission(pl.channelAdminPassword);
-		pm.removePermission(pl.channelAdminDescription);
-		pm.removePermission(pl.channelAdminOwner);
-		pm.removePermission(pl.channelAdminModerator);
-		pm.removePermission(pl.channelAdminAdd);
-		pm.removePermission(pl.channelAdminRename);
-		pm.removePermission(pl.channelAdminDelete);
+		pm.removePermission(pl.getBasiccmdusage());
+		pm.removePermission(pl.getEditconfig());
+		pm.removePermission(pl.getReload());
+		pm.removePermission(pl.getHelpadmin());
+		pm.removePermission(pl.getHelpbasic());
+		pm.removePermission(pl.getFormatColour());
+		pm.removePermission(pl.getFormatFormat());
+		pm.removePermission(pl.getFormatMagic());
+		pm.removePermission(pl.getChannelBasicCreate());
+		pm.removePermission(pl.getChannelBasicPassword());
+		pm.removePermission(pl.getChannelBasicDescription());
+		pm.removePermission(pl.getChannelBasicOwner());
+		pm.removePermission(pl.getChannelBasicModerator());
+		pm.removePermission(pl.getChannelBasicInvite());
+		pm.removePermission(pl.getChannelBasicRename());
+		pm.removePermission(pl.getChannelBasicDelete());
+		pm.removePermission(pl.getChannelAdminCreate());
+		pm.removePermission(pl.getChannelAdminPassword());
+		pm.removePermission(pl.getChannelAdminDescription());
+		pm.removePermission(pl.getChannelAdminOwner());
+		pm.removePermission(pl.getChannelAdminModerator());
+		pm.removePermission(pl.getChannelAdminAdd());
+		pm.removePermission(pl.getChannelAdminRename());
+		pm.removePermission(pl.getChannelAdminDelete());
 		
 	}
 

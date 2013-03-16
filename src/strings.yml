@@ -97,6 +97,22 @@ reloadchatguardsuccess: "§2Successully reloaded the Key Stone Chat Guard module!
 #   Help Command   #
 #------------------#
 
-helpheader: "§9=========   Help Menu   ========="
-helpcore: "§b   ======   Core Help   ======\n"
-helpcorepg1: "§a
+helpheader: "§f=========   §4Help Menu   §f========="
+
+helpcoreheader: "   §f======   §bCore Help   §f======"
+helpcoreinitial: "§c''/KeyStone'' §fcan be followed by the following:"
+helpcorehelp: "§c''Help §4[Module]§c''"
+helpcorereload: "§c''Reload §4[Module]§c''"
+
+helpchatheader: "   §f======   §bChat Help   §f======"
+helpchatinitial: "§c''/KeyStone'' can be followed by the following:"
+helpchatcreatechannel: "§cCreateChannel §4<Channel Name>"
+helpchatrenamechannel: "§cRenameChannel §4<Channel Name> <New Channel Name>"
+helpchatpasswordchannel: "§cProtectChannel §4<Channel Name> <Password>"
+helpchatdescribechannel: "§cChannelDesc §4<Channel Name> <Description>"
+helpchatinvitechannel: "§cChannelInvite §4<Channel Name> <Player>"
+helpchatjoinchannel: "§cJoinChannel §4<Channel Name> [Password]"
+helpchatkickchannel: "§cChannelKick §4<Channel Name> <Player>"
+helpchatbanchannel: "§cChannelBan §4<Channel Name> <Player>"
+
+
