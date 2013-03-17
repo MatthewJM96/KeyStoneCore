@@ -62,24 +62,35 @@ public class GetYamlValues {
 		
 		try {
 			
-			load.warnofnopermission = strings.getString("warnofnopermission");
-			load.defaultspamwarning = strings.getString("defaultspamwarning");
-			load.defaultfoullanguagewarning = strings.getString("defaultfoullanguagewarning");
-			load.missingargcmd = strings.getString("missingargcmd");
-			load.createdchannel = strings.getString("createdchannel");
-			load.extraargcmd = strings.getString("extraargcmd");
-			load.failedchannelcreate = strings.getString("failedchannelcreate");
-			load.createdpassword = strings.getString("createdpassword");
-			load.updatedpassword = strings.getString("updatedpassword");
-			load.removedpassword = strings.getString("removedpassword");
-			load.confirmpassword = strings.getString("confirmpassword");
-			load.deniedpassword = strings.getString("deniedpassword");
-			load.reloadcoresuccess = strings.getString("reloadcoresuccess");
-			load.reloadchatsuccess = strings.getString("reloadchatsuccess");
-			load.reloadchatguardsuccess = strings.getString("reloadchatguardsuccess");
-			load.reloadallsuccess = strings.getString("reloadallsuccess");
-			load.renamechannel = strings.getString("renamechannel");
-			load.renamedisallowed = strings.getString("renamedisallowed");
+			load.setWarnofnopermission(strings.getString("warnofnopermission"));
+			load.setDefaultspamwarning(strings.getString("defaultspamwarning"));
+			load.setDefaultfoullanguagewarning(strings.getString("defaultfoullanguagewarning"));
+			load.setMissingargcmd(strings.getString("missingargcmd"));
+			load.setCreatedchannel(strings.getString("createdchannel"));
+			load.setExtraargcmd(strings.getString("extraargcmd"));
+			load.setFailedchannelcreate(strings.getString("failedchannelcreate"));
+			load.setCreatedpassword(strings.getString("createdpassword"));
+			load.setUpdatedpassword(strings.getString("updatedpassword"));
+			load.setRemovedpassword(strings.getString("removedpassword"));
+			load.setConfirmpassword(strings.getString("confirmpassword"));
+			load.setDeniedpassword(strings.getString("deniedpassword"));
+			load.setReloadcoresuccess(strings.getString("reloadcoresuccess"));
+			load.setReloadchatsuccess(strings.getString("reloadchatsuccess"));
+			load.setReloadchatguardsuccess(strings.getString("reloadchatguardsuccess"));
+			load.setReloadallsuccess(strings.getString("reloadallsuccess"));
+			load.setRenamechannel(strings.getString("renamechannel"));
+			load.setRenamedisallowed(strings.getString("renamedisallowed"));
+			load.setInvitebuddy(strings.getString("invitebuddy"));
+			load.setInvitechannel(strings.getString("invitechannel"));
+			load.setInvitegroup(strings.getString("invitegroup"));
+			load.setInvitedbuddy(strings.getString("invitedbuddy"));
+			load.setInvitedchannel(strings.getString("invitedchannel"));
+			load.setInvitedgroup(strings.getString("invitedgroup"));
+			load.setHelpheader(strings.getString("helpheader"));
+			load.setHelpcoreheader(strings.getString("helpcoreheader"));
+			load.setHelpcoreinitial(strings.getString("helpcoreinitial"));
+			load.setHelpcorehelp(strings.getString("helpcorehelp"));
+			//TODO: Decide between this, and getting where needed. Then acting on decision!
 			
 		} catch (Exception e) {
 			log.info("Error getting string values!");

@@ -10,6 +10,10 @@ import org.bukkit.Bukkit;
 
 public class TimeParser {
 	
+	public TimeParser() {
+		return;
+	}
+	
 	private static String CurDate;
 	private int CurSeconds;
 	private int CurMinutes;
@@ -33,7 +37,7 @@ public class TimeParser {
 	 * 
 	 * @return
 	 */
-	public static String getSystDate() {
+	public String getSystDate() {
 		
 		currentDate = new Date();
 		CurDate = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").format(currentDate);
@@ -283,13 +287,14 @@ public class TimeParser {
 	
 	/**
 	 * Returns a time equal to the current system time increased by a value equal
-	 * to the time period Int for the time scale string
+	 * to the time period Int for the time scale String
 	 * 
 	 * @param Int
 	 * @param timeScale
 	 * @return
+	 * Updated Time as a String
 	 */
-	public static String updateTime(int timePeriod, String timeScale) {
+	public String updateTime(int timePeriod, String timeScale) {
 		
 		String newDate;
 				
@@ -339,7 +344,7 @@ public class TimeParser {
 	 * @param string
 	 * @return
 	 */
-	public static boolean compareTimeToCurrent(String time) {
+	public boolean compareTimeToCurrent(String time) {
 		
 		Calendar calendarDate = GregorianCalendar.getInstance();
 		Calendar givenDate = GregorianCalendar.getInstance();
@@ -375,7 +380,7 @@ public class TimeParser {
 	 * @param string
 	 * @return
 	 */
-	public static int timeDifferenceToCurrent(String string) {
+	public int timeDifferenceToCurrent(String string) {
 		
 		Calendar curDate = GregorianCalendar.getInstance();
 		Calendar givenDate = GregorianCalendar.getInstance();

@@ -1,8 +1,6 @@
 package com.github.samthepsychoticleprechaun.KeyStoneCore.CommandHandler.Commands;
 
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-
 import com.github.samthepsychoticleprechaun.KeyStoneChatGuard.YAML.LoadChatGuardYaml;
 import com.github.samthepsychoticleprechaun.KeyStoneChat.API.Chat.SendMessage;
 import com.github.samthepsychoticleprechaun.KeyStoneChat.YAML.LoadChatYaml;
@@ -22,10 +20,10 @@ public class Reload {
 	SendMessage msg = null;
 	
 	StringValues load = new StringValues();
-	String allReloadSuccess = load.reloadallsuccess;
-	String coreReloadSuccess = load.reloadcoresuccess;
-	String chatReloadSuccess = load.reloadchatsuccess;
-	String chatGuardReloadSuccess = load.reloadchatguardsuccess;
+	String allReloadSuccess = load.getReloadallsuccess();
+	String coreReloadSuccess = load.getReloadcoresuccess();
+	String chatReloadSuccess = load.getReloadchatsuccess();
+	String chatGuardReloadSuccess = load.getReloadchatguardsuccess();
 	
 	/**
 	 * Reload all configuration files from disk to memory.

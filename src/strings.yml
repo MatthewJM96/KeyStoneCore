@@ -87,11 +87,35 @@ updatedpassword: "§2You have successfully updated the password for channel "
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
 removedpassword: "§2You have successfully removed the password of channel "
 
-#The following messages are displayed when the respecitve modules are successfully reloaded:
+# This message is recieved by a player when they are invited to join a channel.
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+invitedchannel: "§2 has invited you to their channel, "
+
+# This message is recieved by a player when they have invited another player to join a channel.
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+invitechannel: "§2You have invited *p to the channel, "
+
+# The following messages are displayed when the respecitve modules are successfully reloaded:
 reloadallsuccess: "§2Successfully reloaded the whole Key Stone Suite!"
 reloadcoresuccess: "§2Successfully reloaded the Key Stone Core module!"
 reloadchatsuccess: "§2Successfully reloaded the Key Stone Chat module!"
 reloadchatguardsuccess: "§2Successully reloaded the Key Stone Chat Guard module!"
+
+# This message is recieved by a player when they are invited to become friends with another player.
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+invitedbuddy: "§2 has invited you to be their friend!"
+
+# This message is recieved by a player when they have invited another player to be their friend.
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+invitebuddy: "§2You have invited *p to be your friend!"
+
+# This message is revieved by a player when they are invited to become friends with another player.
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+invitedgroup: "§2 has invited you to join their group, "
+
+# This message is recieved by a player when they have invited another player to join a group.
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+invitechannel: "§2You have invited *p to the group, "
 
 #------------------#
 #   Help Command   #

@@ -21,8 +21,8 @@ public class CommandHandler implements CommandExecutor{
 		
 		Player p = (Player) sender;
 		StringValues load = new StringValues();
-		String noperm = load.warnofnopermission;
-		String extraargs = load.extraargcmd;
+		String noperm = load.getWarnofnopermission();
+		String extraargs = load.getExtraargcmd();
 		SendMessage msg = null;
 		if (isEnabled.getIsEnabledList().get("KeyStoneChat")) {
 			msg = new SendMessage();
