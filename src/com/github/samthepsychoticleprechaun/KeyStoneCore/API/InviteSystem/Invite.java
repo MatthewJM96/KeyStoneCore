@@ -8,6 +8,7 @@ import com.github.samthepsychoticleprechaun.KeyStoneChat.API.Chat.SendMessage;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.API.General.IsEnabled;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.API.General.TimeParser;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.API.InviteSystem.InviteType.InvType;
+import com.github.samthepsychoticleprechaun.KeyStoneCore.BuddySystem.BuddySystem;
 import com.github.samthepsychoticleprechaun.KeyStoneCore.Storage.StringValues;
 
 public class Invite {
@@ -23,6 +24,7 @@ public class Invite {
 	SendMessage msg = new SendMessage();
 	StringValues load = new StringValues();
 	TimeParser time = new TimeParser();
+	BuddySystem buddy = new BuddySystem();
 	
 	String inviteChannel;
 	String invitedChannel;
@@ -47,6 +49,26 @@ public class Invite {
 			return false;
 			
 		}
+		
+	}
+	
+	public boolean AcceptInvite(Player invitee) {
+		
+		if (invitelist.get(invitee.getName()).equals(InvType.BUDDY)) {
+			
+			buddy.acceptBuddyInvite(invitee);
+			
+		} else if (invitelist.get(invitee.getName()).equals(InvType.CHANNEL)) {
+			
+			
+			
+		} else if (invitelist.get(invitee.getName()).equals(InvType.GROUP)) {
+			
+			
+			
+		}
+		
+		return false;
 		
 	}
 	

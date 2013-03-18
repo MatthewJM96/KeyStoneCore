@@ -26,10 +26,15 @@ public class StringValues {
 	private String renamedisallowed;
 	private String invitechannel;
 	private String invitebuddy;
+	private String inviteneutral;
 	private String invitegroup;
 	private String invitedchannel;
 	private String invitedbuddy;
+	private String invitedneutral;
 	private String invitedgroup;
+	private String befriended;
+	private String becomeneutral;
+	private String becomeenemy;
 	private String helpheader;
 	private String helpcoreheader;
 	private String helpcoreinitial;
@@ -355,6 +360,46 @@ public class StringValues {
 
 	public void setHelpchatbanchannel(String helpchatbanchannel) {
 		this.helpchatbanchannel = helpchatbanchannel;
+	}
+	
+	public String getInvitedneutral() {
+		return invitedneutral;
+	}
+	
+	public void setInvitedneutral(String invitedneutral) {
+		this.invitedneutral = invitedneutral;
+	}
+	
+	public String getInviteneutral() {
+		return inviteneutral;
+	}
+	
+	public void setInviteneutral(String inviteneutral) {
+		this.inviteneutral = inviteneutral;
+	}
+	
+	public String getBefriended() {
+		return befriended;
+	}
+	
+	public void setBefriended(String befriended) {
+		this.befriended = befriended;
+	}
+	
+	public String getBecomeneutral() {
+		return becomeneutral;
+	}
+	
+	public void setBecomeneutral(String becomeneutral) {
+		this.becomeneutral = becomeneutral;
+	}
+	
+	public String getBecomeenemy() {
+		return becomeenemy;
+	}
+	
+	public void setBecomeenemy(String becomeenemy) {
+		this.becomeenemy = becomeenemy;
 	}
 	
 }

@@ -81,9 +81,11 @@ public class GetYamlValues {
 			load.setRenamechannel(strings.getString("renamechannel"));
 			load.setRenamedisallowed(strings.getString("renamedisallowed"));
 			load.setInvitebuddy(strings.getString("invitebuddy"));
+			load.setInviteneutral(strings.getString("inviteneutral"));
 			load.setInvitechannel(strings.getString("invitechannel"));
 			load.setInvitegroup(strings.getString("invitegroup"));
 			load.setInvitedbuddy(strings.getString("invitedbuddy"));
+			load.setInvitedneutral(strings.getString("invitedneutral"));
 			load.setInvitedchannel(strings.getString("invitedchannel"));
 			load.setInvitedgroup(strings.getString("invitedgroup"));
 			load.setHelpheader(strings.getString("helpheader"));

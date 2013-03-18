@@ -109,6 +109,14 @@ invitedbuddy: "§2 has invited you to be their friend!"
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
 invitebuddy: "§2You have invited *p to be your friend!"
 
+# This message is recieved by a player when they are invited to end hostilities with another player.
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+invitedneutral: "§2 has invited you to end hostilities between one another!"
+
+# This message is recieved by a player when they have invited another player to end hostilities and become neutral.
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+inviteneutral: "§2You have invited *p to end hostilities!"
+
 # This message is revieved by a player when they are invited to become friends with another player.
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
 invitedgroup: "§2 has invited you to join their group, "
@@ -116,6 +124,18 @@ invitedgroup: "§2 has invited you to join their group, "
 # This message is recieved by a player when they have invited another player to join a group.
 # Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
 invitechannel: "§2You have invited *p to the group, "
+
+# This message is recieved by two players when they become friends.
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+befriended: "§2You are now friends with "
+
+# This message is recieved by two players when they end hostilities.
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+becomeneutral: "§2You are no longer enemies with "
+
+# This message is recieved by two players when they become enemies.
+# Extra details are automatically added to the end of the message(so leave a space for nice formatting!)
+becomeenemy: "§2You are now enemies with "
 
 #------------------#
 #   Help Command   #
